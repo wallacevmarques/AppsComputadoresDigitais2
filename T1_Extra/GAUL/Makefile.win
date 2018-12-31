@@ -1,0 +1,62 @@
+# Project: gaul-util
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = util/avltree.o util/compatibility.o util/linkedlist.o util/log_util.o util/log_util_parallel.o util/memory_chunks.o util/memory_util.o util/mtprng.o util/nn_util.o util/random_util.o util/table_util.o util/timer_util.o
+LINKOBJ  = util/avltree.o util/compatibility.o util/linkedlist.o util/log_util.o util/log_util_parallel.o util/memory_chunks.o util/memory_util.o util/mtprng.o util/nn_util.o util/random_util.o util/table_util.o util/timer_util.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = gaul-util.a
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) -I"D:/Biblioteca/Documentos/UERJ/Computadores Digitais/Trabalhos/Trabalho 1 - Extra/GAUL/util/"
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(LINKOBJ)
+	ar r $(BIN) $(LINKOBJ)
+	ranlib $(BIN)
+
+util/avltree.o: util/avltree.c
+	$(CC) -c util/avltree.c -o util/avltree.o $(CFLAGS)
+
+util/compatibility.o: util/compatibility.c
+	$(CC) -c util/compatibility.c -o util/compatibility.o $(CFLAGS)
+
+util/linkedlist.o: util/linkedlist.c
+	$(CC) -c util/linkedlist.c -o util/linkedlist.o $(CFLAGS)
+
+util/log_util.o: util/log_util.c
+	$(CC) -c util/log_util.c -o util/log_util.o $(CFLAGS)
+
+util/log_util_parallel.o: util/log_util_parallel.c
+	$(CC) -c util/log_util_parallel.c -o util/log_util_parallel.o $(CFLAGS)
+
+util/memory_chunks.o: util/memory_chunks.c
+	$(CC) -c util/memory_chunks.c -o util/memory_chunks.o $(CFLAGS)
+
+util/memory_util.o: util/memory_util.c
+	$(CC) -c util/memory_util.c -o util/memory_util.o $(CFLAGS)
+
+util/mtprng.o: util/mtprng.cpp
+	$(CC) -c util/mtprng.cpp -o util/mtprng.o $(CFLAGS)
+
+util/nn_util.o: util/nn_util.c
+	$(CC) -c util/nn_util.c -o util/nn_util.o $(CFLAGS)
+
+util/random_util.o: util/random_util.c
+	$(CC) -c util/random_util.c -o util/random_util.o $(CFLAGS)
+
+util/table_util.o: util/table_util.c
+	$(CC) -c util/table_util.c -o util/table_util.o $(CFLAGS)
+
+util/timer_util.o: util/timer_util.c
+	$(CC) -c util/timer_util.c -o util/timer_util.o $(CFLAGS)

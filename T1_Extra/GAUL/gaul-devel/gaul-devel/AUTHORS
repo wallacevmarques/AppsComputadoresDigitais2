@@ -1,0 +1,31 @@
+Primary author/maintainer: "Stewart Adcock" <stewart@linux-domain.com>
+
+Stewart would like to thank the following people:
+
+Prior to release 0.1845:
+Gad Abraham - Testing Debian package.
+Henk van Lingen - ga_crossover_bitstring_doublepoints() and ga_bit_copy() bug reports.
+
+Prior to release 0.1843:
+Kalin Kozhuharov - HP-UX/MPP and Hitachi SR8000 testing and compilation reports.
+
+Prior to release 0.1842:
+McKenzie Keith - Providing Cygwin binaries.  Reporting MingW issues.
+Ben Webb - Tesing Cygwin binaries.
+Kate Mullen - Simulated annealling documentation.
+
+Prior to release 0.1841:
+Daniel Pick - Bug reports and fix.
+McKenzie Keith - Windows DLL compilation.
+
+Prior to release 0.1840:
+Antti Akonniemi - MacOS X compilation report.
+Mark T. Richardson - QNX V6 compilation report.
+
+Prior to release 0.1839:
+Syrrx, Inc. - Dollars :-)
+
+Prior to release 0.1838:
+Stepan Harbek - Cygwin compilation reports and tips.
+Sourceforge (http://sourceforge.net/) - Hosting services.
+
